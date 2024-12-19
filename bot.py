@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
+import random
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
@@ -14,9 +15,12 @@ async def on_ready():
 
 @bot.command()
 async def roast(ctx, user: discord.Member = None):
+  list_of_insults = open("insults.txt" , "r")
+  content = insults.readlines()
+  insult = content[random.randint(0, len(content)-1)].strip().upper()
   if user:
-    await ctx.send("Nigger")
+    await ctx.send(f"{user.mention}: {insult}")
   else:
-    await ctx.send("Big Black Cock)
+    await ctx.send(f"{user.mention}: Erm, what the sigma? You\'re missing a parameter!")
 
 bot.run(TOKEN)
