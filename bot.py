@@ -1,7 +1,10 @@
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
+import os
 
-TOKEN = 'MTMxOTQ0MjU2NTkxNzA1Mjk3OQ.GbLu7t.3jdyJ79fje1tx3co4br2bw8JcMDn4XmVukyJos'
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = dommands.Bot(command_prefix="/")
 
