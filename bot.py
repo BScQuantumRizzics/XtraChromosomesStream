@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import os
 import random
 
+#MEOEW
+
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
