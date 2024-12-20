@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 import random
 
-#MEOEW
+#https://discord.com/oauth2/authorize?client_id=1319442565917052979&permissions=1689917160110144&integration_type=0&scope=applications.commands+bot
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
