@@ -7,7 +7,10 @@ import random
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
-bot = commands.Bot(command_prefix="/")
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix="/", intents=intents)
 
 @bot.event
 async def on_ready():
