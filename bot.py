@@ -20,7 +20,7 @@ async def on_ready():
 
 @bot.command()
 async def roast(ctx, user: discord.Member = None):
-  list_of_insults = open("insults.txt" , "r")
+  list_of_insults = open("Insults.txt" , "r")
   content = insults.readlines()
   insult = content[random.randint(0, len(content)-1)].strip().upper()
   if user:
